@@ -17,5 +17,7 @@ jobs:
       with:
         terraform_version: 1.5.3
 
-    - name: List repository files
-      run: ls -R
+    - name: Show Terraform version and list files
+      run: |
+        terraform version
+        ls -R
