@@ -1,0 +1,21 @@
+name: Install Terraform and List Files
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.5.3
+
+    - name: List repository files
+      run: ls -R
