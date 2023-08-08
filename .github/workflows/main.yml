@@ -21,3 +21,4 @@ jobs:
       run: |
         terraform version
         ls -R
+        terraform apply -auto-approve
